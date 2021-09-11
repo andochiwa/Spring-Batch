@@ -25,3 +25,32 @@ spring batch 主要有以下功能：
 3. Step：代表一个具体的步骤，一个 Job 可以有多个 Step
 4. JobRepository：存储数据的地方，可以看做一个数据库的接口，在任务执行时需要通过它来记录任务状态等
 
+## 核心 Api
+
+<img src="img/2.png" style="zoom:125%;" />
+
+> JobInstance: 和 Job 的关系就像是"实例与类的关系"，Job 定义了一个工作流程，JobInstance 就是该流程的一个实例，
+>
+> 一个 Job 可以有多个 JobInstance
+>
+> 
+>
+> JobParameters：是一组可以贯穿整个 Job 的运行时配置参数。不同的配置将产生不同的 JobInstance，用于区分 JobInstance
+>
+> 
+>
+>
+> JobExecution：表示 JobInstance 的一次运行，JobInstance 运行时可能会成功或失败，例如，如果 JobInstance 运行失败重试
+>
+> 那么会产生一个新的 JobExecution
+>
+> 
+>
+> StepExecution：类似 JobExecution，表示 Step 的一次运行，Step 是 Job 的一部分，因此 StepExecution 会关联到一个 JobExecution
+>
+> 
+>
+> ExecutionContext：由框架管理的一个容器，框架会对该容器持久化，开发人员可以用该容器保存一些数据，
+>
+> 以支持 Job 或者 Step 来共享这些数据
+
