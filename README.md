@@ -29,9 +29,7 @@ spring batch 主要有以下功能：
 
 <img src="img/2.png" style="zoom:125%;" />
 
-> JobInstance: 和 Job 的关系就像是"实例与类的关系"，Job 定义了一个工作流程，JobInstance 就是该流程的一个实例，
->
-> 一个 Job 可以有多个 JobInstance
+> JobInstance: 和 Job 的关系就像是"实例与类的关系"，Job 定义了一个工作流程，JobInstance 就是该流程的一个实例，一个 Job 可以有多个 JobInstance
 >
 > 
 >
@@ -40,9 +38,7 @@ spring batch 主要有以下功能：
 > 
 >
 >
-> JobExecution：表示 JobInstance 的一次运行，JobInstance 运行时可能会成功或失败，例如，如果 JobInstance 运行失败重试
->
-> 那么会产生一个新的 JobExecution
+> JobExecution：表示 JobInstance 的一次运行，JobInstance 运行时可能会成功或失败，例如，如果 JobInstance 运行失败重试那么会产生一个新JobExecution
 >
 > 
 >
@@ -50,7 +46,5 @@ spring batch 主要有以下功能：
 >
 > 
 >
-> ExecutionContext：由框架管理的一个容器，框架会对该容器持久化，开发人员可以用该容器保存一些数据，
->
-> 以支持 Job 或者 Step 来共享这些数据
+> ExecutionContext：由框架管理的一个容器，框架会对该容器持久化，开发人员可以用该容器保存一些数据，以支持 Job 或者 Step 来共享这些数据
 
