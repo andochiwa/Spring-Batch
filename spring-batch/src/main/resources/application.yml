@@ -1,5 +1,10 @@
 spring:
-  r2dbc:
-    url: r2dbcs:mysql://localhost:3306/test?serverZoneId=Japan
+  datasource:
     username: root
     password: root
+    url: jdbc:mysql://localhost:3306/spring_batch?serverTimezone=Japan
+  batch:
+    jdbc:
+      initialize-schema: always
+      # 可以不配置，会自动导入
+      # schema: classpath:/org/springframework/batch/core/schema-mysql.sql
