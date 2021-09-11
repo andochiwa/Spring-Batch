@@ -51,3 +51,8 @@ spring batch 主要有以下功能：
 ## Split 并发执行
 
 split 可以实现多个 step 或 flow 并发执行
+
+## Listener
+
+Job 的监听器，实现`JobExecutionListener`接口，然后放入 listener 中即可进行环绕通知一样的拦截
+
