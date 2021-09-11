@@ -48,3 +48,6 @@ spring batch 主要有以下功能：
 >
 > ExecutionContext：由框架管理的一个容器，框架会对该容器持久化，开发人员可以用该容器保存一些数据，以支持 Job 或者 Step 来共享这些数据
 
+## Split 并发执行
+
+split 可以实现多个 step 或 flow 并发执行
